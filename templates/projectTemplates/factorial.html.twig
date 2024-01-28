@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{ title }}
+	|
+	{{ parent() }}
+{% endblock %}
+{% block body %}
+	{% if isError is defined %}
+		<h3>{{ errorMsg }}</h3>
+	{% else %}
+		<h3>
+        Result:	{{ result }}
+        </h3>
+	{% endif %}
+{% endblock %}
